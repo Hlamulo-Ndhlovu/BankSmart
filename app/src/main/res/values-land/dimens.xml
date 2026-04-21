@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="auth_header_padding_top">48dp</dimen>
+    <dimen name="auth_header_padding_bottom">28dp</dimen>
+    <dimen name="preview_photo_height">140dp</dimen>
+</resources>

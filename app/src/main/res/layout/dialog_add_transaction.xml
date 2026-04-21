@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchAmountLimits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txn_optional_amount_limits" />
+
+        <LinearLayout
+            android:id="@+id/limitsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/txn_min_limit_label"
+                android:textAppearance="?attr/textAppearanceBody2" />
+
+            <TextView
+                android:id="@+id/textMinLimitValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderMinLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="100"
+                android:value="5000"
+                android:valueFrom="100"
+                android:valueTo="10000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/txn_max_limit_label"
+                android:textAppearance="?attr/textAppearanceBody2" />
+
+            <TextView
+                android:id="@+id/textMaxLimitValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderMaxLimit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="100"
+                android:value="25000"
+                android:valueFrom="11000"
+                android:valueTo="50000" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/amount_hint"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAmountDecrease"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/txn_amount_decrease"
+                android:minHeight="48dp"
+                android:text="@string/txn_amount_minus"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textAmountValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAmountIncrease"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/txn_amount_increase"
+                android:minHeight="48dp"
+                android:text="@string/txn_amount_plus"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/txn_expense" />
+
+            <RadioButton
+                android:id="@+id/radioIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/income" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/account">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/dropdownAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/field_category">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/dropdownCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/note_optional">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</ScrollView>

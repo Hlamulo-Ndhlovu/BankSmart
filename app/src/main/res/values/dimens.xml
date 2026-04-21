@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Centered content column: full width on phones, capped on large screens / tablets -->
+    <dimen name="content_max_width">560dp</dimen>
+    <dimen name="screen_padding_horizontal">16dp</dimen>
+    <dimen name="screen_padding_vertical">16dp</dimen>
+    <!-- Space above bottom navigation so scroll content is not hidden -->
+    <dimen name="bottom_nav_content_padding">92dp</dimen>
+    <!-- Auth screens -->
+    <dimen name="auth_header_padding_top">72dp</dimen>
+    <dimen name="auth_header_padding_bottom">40dp</dimen>
+    <dimen name="auth_header_padding_horizontal">24dp</dimen>
+    <dimen name="auth_card_overlap">-20dp</dimen>
+    <dimen name="auth_card_margin_horizontal">24dp</dimen>
+    <dimen name="auth_card_padding">24dp</dimen>
+    <!-- Main dashboard balance card in app bar -->
+    <dimen name="app_bar_card_margin">16dp</dimen>
+    <!-- Categories / media -->
+    <dimen name="preview_photo_height">160dp</dimen>
+    <!-- Profile app bar block -->
+    <dimen name="profile_appbar_padding">20dp</dimen>
+    <dimen name="profile_cover_height">200dp</dimen>
+    <dimen name="profile_avatar_size">108dp</dimen>
+    <dimen name="profile_avatar_overlap">-48dp</dimen>
+    <dimen name="profile_avatar_inner_padding">22dp</dimen>
+</resources>

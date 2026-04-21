@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+build/
+
+# Local / secrets
+local.properties
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+
+# Kotlin
+.kotlin/
+
+# Built artifacts
+*.apk
+*.aar
+*.ap_
+*.aab
+*.dex
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NDK
+.externalNativeBuild
+.cxx/
+
+# Profiling
+*.hprof
+
+# Misc
+/captures
+*.jks
+*.keystore

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="content_max_width">640dp</dimen>
+    <dimen name="screen_padding_horizontal">24dp</dimen>
+    <dimen name="screen_padding_vertical">20dp</dimen>
+    <dimen name="auth_header_padding_horizontal">32dp</dimen>
+    <dimen name="auth_card_margin_horizontal">32dp</dimen>
+    <dimen name="profile_appbar_padding">24dp</dimen>
+</resources>
