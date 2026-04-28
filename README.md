@@ -54,8 +54,6 @@ Language: Kotlin
 
 Database: Room (SQLite) for local data persistence.
 
-Architecture: MVVM (Model-View-ViewModel).
-
 UI Components: Material Design 3, Lottie (for gamification animations).
 
 Getting Started
