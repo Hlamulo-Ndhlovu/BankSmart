@@ -18,6 +18,15 @@ Achievement Badges: Unlock digital trophies for milestones like "7-Day Saver" or
 
 Visual Infographics: Beautifully rendered charts to help you visualize spending patterns.
 
+The "Safe-to-Spend" Engine: A real-time dashboard that calculates exactly how much you can spend today without ruining your monthly goals.
+
+XP & Leveling System: Progress from a "Financial Novice" to a "Wealth Master." Every transaction logged and every budget met earns you Experience Points (XP).
+
+Streak Protection: Visual motivation via a "Daily Flame." Don't let your logging streak break!
+
+Achievement Gallery: A dedicated space to view unlocked digital badges, rewarding positive financial behaviors like "Emergency Fund Starter" or "7-Day Discipline."
+
+Fast-Entry Interface: A streamlined, one-tap entry system inspired by the "MyMoney" philosophy to ensure zero friction while on the go.
 🛠️ Tech Stack
 Platform: Android
 
