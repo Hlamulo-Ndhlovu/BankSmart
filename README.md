@@ -104,6 +104,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Demo Video link:
 https://youtu.be/j2VHyl9YAmw?si=VQ1xLtgTTKC6V0Yx
+<img width="720" height="1612" alt="WhatsApp Image 2026-04-28 at 17 39 10 (2)" src="https://github.com/user-attachments/assets/8d3cac67-3a0b-424e-a539-eac5684bbd53" />
 
  
 Author
