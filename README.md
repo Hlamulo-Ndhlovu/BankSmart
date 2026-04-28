@@ -32,8 +32,22 @@ Gamification Logic
 The "Financial Fitness" algorithm is handled by a custom service that triggers every time a transaction is saved. It checks:
 
 Consecutive Days: If currentDate - lastEntryDate == 1, the streak is incremented.
+Enhanced Features in BankSmart
+Digital Receipt Capture: Users can now take pictures of physical receipts directly within the app. These images are linked to specific transactions, providing a digital paper trail for tax time or warranty tracking.
 
-🛠️ Tech Stack
+Dynamic Category Management: Unlike rigid budgeting tools, BankSmart allows users to create, edit, and delete custom categories. You can personalize your budget with unique names and icons to match your specific lifestyle.
+
+Frictionless Quick-Add: A streamlined, one-tap entry system inspired by the "MyMoney" philosophy to ensure zero friction while on the go.
+
+Technical Deep Dive (Updated)
+Media Storage & URI Handling
+To handle the "Take Picture" feature, BankSmart utilizes the Android CameraX API or Intent-based Image Capture.
+
+Storage Strategy: To keep the app fast and the database light, the app does not store the actual image in the SQLite database. Instead, it saves the image to the Internal App Storage and stores the File Path (URI) in the transactions table.
+
+Permissions: Implements the latest Android Scoped Storage guidelines to ensure user privacy and data security.
+
+Tech Stack
 Platform: Android
 
 Language: Kotlin
@@ -44,7 +58,7 @@ Architecture: MVVM (Model-View-ViewModel).
 
 UI Components: Material Design 3, Lottie (for gamification animations).
 
-🚀 Getting Started
+Getting Started
 Prerequisites
 Android Studio Ladybug (or newer)
 
@@ -87,8 +101,8 @@ Build: Iterative development via 2-week Sprints.
 
 Evaluate: User testing and performance optimization.
 
-📜 License
+License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-👤 Author
+Author
 Simphiwe, Mbuso, Nhlamulo - Software Development Students
