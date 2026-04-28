@@ -56,3 +56,24 @@ Select your device/emulator and click the Run button.
 
 Run the app:
 Select your device/emulator and click the Run button.
+
+
+
+Methodology
+This project was developed using Agile Methodology. The development was split into five critical phases:
+
+Research: Competitive analysis of Spendee, Vault22, and MyMoney.
+
+Planning: Defined WBS, RACI matrix, and network diagrams.
+
+Design: High-fidelity UI/UX wireframing.
+
+Build: Iterative development via 2-week Sprints.
+
+Evaluate: User testing and performance optimization.
+
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+👤 Author
+Simphiwe, Mbuso, Nhlamulo - Software Development Students
