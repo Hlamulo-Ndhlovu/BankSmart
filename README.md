@@ -28,9 +28,9 @@ Achievement Gallery: A dedicated space to view unlocked digital badges, rewardin
 
 Fast-Entry Interface: A streamlined, one-tap entry system inspired by the "MyMoney" philosophy to ensure zero friction while on the go.
 
+OUR OWN FEATURE
 Gamification Logic
 The "Financial Fitness" algorithm is handled by a custom service that triggers every time a transaction is saved. It checks:
-
 Consecutive Days: If currentDate - lastEntryDate == 1, the streak is incremented.
 Enhanced Features in BankSmart
 Digital Receipt Capture: Users can now take pictures of physical receipts directly within the app. These images are linked to specific transactions, providing a digital paper trail for tax time or warranty tracking.
