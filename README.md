@@ -27,6 +27,12 @@ Streak Protection: Visual motivation via a "Daily Flame." Don't let your logging
 Achievement Gallery: A dedicated space to view unlocked digital badges, rewarding positive financial behaviors like "Emergency Fund Starter" or "7-Day Discipline."
 
 Fast-Entry Interface: A streamlined, one-tap entry system inspired by the "MyMoney" philosophy to ensure zero friction while on the go.
+
+Gamification Logic
+The "Financial Fitness" algorithm is handled by a custom service that triggers every time a transaction is saved. It checks:
+
+Consecutive Days: If currentDate - lastEntryDate == 1, the streak is incremented.
+
 🛠️ Tech Stack
 Platform: Android
 
