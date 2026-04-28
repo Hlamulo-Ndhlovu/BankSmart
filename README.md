@@ -1,11 +1,11 @@
-BankSmart 💰🎮
+BankSmart 
 Budgeting made fun, one quest at a time.
-📌 Project Overview
+Project Overview
 BankSmark is an Android-based personal finance manager designed to solve "budgeting burnout." By blending robust financial tracking with engaging gamification mechanics, the app transforms daily expense logging into a rewarding experience.
 
 Built as a final-year project, this application focuses on simplicity, visual clarity, and habit formation.
 
-✨ Key Features
+Key Features
 Safe-to-Spend Dashboard: Instantly see your daily allowance based on your monthly goals.
 
 Frictionless Logging: Add transactions in under 3 seconds with our optimized "Quick-Add" interface.
