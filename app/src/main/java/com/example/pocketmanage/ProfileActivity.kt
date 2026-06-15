@@ -20,6 +20,7 @@ import com.example.pocketmanage.auth.AuthGuard
 import com.example.pocketmanage.auth.LocalAuth
 import com.example.pocketmanage.auth.LocalAuthRepository
 import com.example.pocketmanage.data.AppDatabase
+import com.example.pocketmanage.data.FirebaseDataStore
 import com.example.pocketmanage.data.FinanceRepository
 import com.example.pocketmanage.util.MoneyFormat
 import com.example.pocketmanage.util.ProfileAvatarStorage
@@ -314,8 +315,61 @@ class ProfileActivity : AppCompatActivity() {
                 MoneyFormat.formatCents(exp)
             findViewById<android.widget.TextView>(R.id.profileBudgetsCount).text =
                 FinanceRepository.budgetCategoriesCount().toString()
+            bindRewards(FinanceRepository.rewardsStatus())
 
             userId?.let { bindAvatar(it) }
         }
+    }
+
+    private fun bindRewards(rewards: FinanceRepository.RewardsUi) {
+        findViewById<android.widget.TextView>(R.id.rewardsPointsText).text =
+            getString(R.string.rewards_points_fmt, rewards.points)
+        findViewById<android.widget.TextView>(R.id.rewardsLevelText).text =
+            getString(R.string.rewards_level_fmt, rewards.level)
+        findViewById<android.widget.TextView>(R.id.rewardsBadgeText).text = rewards.badgeName
+        findViewById<android.widget.TextView>(R.id.rewardsNextLevelText).text = getString(
+            R.string.rewards_next_level_fmt,
+            rewards.pointsToNextLevel,
+            rewards.level + 1,
+        )
+        findViewById<android.widget.ProgressBar>(R.id.rewardsLevelProgressBar).progress =
+            rewards.levelProgressPercent
+        findViewById<android.widget.TextView>(R.id.rewardsStreakText).text =
+            resources.getQuantityString(
+                R.plurals.rewards_streak_days_fmt,
+                rewards.streakDays,
+                rewards.streakDays,
+            )
+        findViewById<android.widget.TextView>(R.id.savingsGoalText).text = getString(
+            R.string.savings_goal_amount_fmt,
+            MoneyFormat.formatCents(rewards.savingsCurrentCents),
+            MoneyFormat.formatCents(rewards.savingsGoalCents),
+        )
+        findViewById<android.widget.ProgressBar>(R.id.savingsProgressBar).progress =
+            rewards.savingsProgressPercent
+        findViewById<android.widget.TextView>(R.id.savingsProgressText).text = getString(
+            R.string.savings_progress_fmt,
+            rewards.savingsProgressPercent,
+        )
+        findViewById<android.widget.TextView>(R.id.challengeDailyText).text = getString(
+            R.string.challenge_daily_tracking_fmt,
+            rewards.transactionChallengeProgress,
+            rewards.transactionChallengeGoal,
+        )
+        findViewById<android.widget.TextView>(R.id.challengeBudgetText).text = getString(
+            R.string.challenge_budget_fmt,
+            rewards.budgetsWithinLimit,
+            rewards.budgetCount,
+        )
+        findViewById<android.widget.TextView>(R.id.challengeSaveText).text = getString(
+            R.string.challenge_save_fmt,
+            rewards.savingsProgressPercent,
+        )
+        val syncText = if (FirebaseDataStore.isEnabled()) {
+            R.string.cloud_sync_connected
+        } else {
+            R.string.cloud_sync_local_only
+        }
+        findViewById<android.widget.TextView>(R.id.profileCloudSyncStatus).text = getString(syncText)
     }
 }

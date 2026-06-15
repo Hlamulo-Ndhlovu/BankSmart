@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1071095782384",
+    "project_id": "banksmart-84f80",
+    "storage_bucket": "banksmart-84f80.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071095782384:android:ba472dd02fc921f9455b35",
+        "android_client_info": {
+          "package_name": "com.example.pocketmanage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5fpiPaH1v1ojHf4m2V47CqZZHaKFSgNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

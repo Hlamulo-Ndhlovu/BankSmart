@@ -89,6 +89,29 @@
     <string name="needs">Needs</string>
     <string name="wants">Wants</string>
     <string name="savings_goal">Savings Goal</string>
+    <string name="financial_progress">Financial Progress</string>
+    <string name="rewards_title">Points &amp; Rewards</string>
+    <string name="rewards_subtitle">Earn points for tracking expenses, keeping streaks, and staying within budget.</string>
+    <string name="rewards_points_fmt">%1$d pts</string>
+    <string name="rewards_points_label">Reward balance</string>
+    <string name="rewards_badge_icon">B</string>
+    <string name="rewards_next_level_fmt">%1$d pts to Level %2$d</string>
+    <string name="rewards_level_fmt">Level %1$d</string>
+    <string name="rewards_streak_fmt">%1$d-day streak</string>
+    <string name="rewards_streak_label">Active streak</string>
+    <string name="savings_goal_amount_fmt">%1$s of %2$s saved</string>
+    <string name="savings_progress_fmt">%1$d%% saved</string>
+    <string name="challenges_title">Challenges</string>
+    <string name="challenge_daily_tracking_fmt">Track spending: %1$d/%2$d days this month</string>
+    <string name="challenge_budget_fmt">Stay within budget: %1$d/%2$d categories on track</string>
+    <string name="challenge_save_fmt">Save R500: %1$d%% complete</string>
+    <string name="cloud_sync_connected">Cloud sync: Connected to Firebase</string>
+    <string name="cloud_sync_local_only">Cloud sync: Local only</string>
+
+    <plurals name="rewards_streak_days_fmt">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
 
     <!-- Category entries (Room CRUD) -->
     <string name="saved_category_entries">Saved entries</string>

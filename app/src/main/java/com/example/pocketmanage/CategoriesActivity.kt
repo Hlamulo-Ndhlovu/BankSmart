@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pocketmanage.auth.AuthGuard
 import com.example.pocketmanage.data.AppDatabase
 import com.example.pocketmanage.data.CategoryEntry
+import com.example.pocketmanage.data.FirebaseDataStore
 import com.example.pocketmanage.databinding.ActivityCategoriesBinding
 import com.example.pocketmanage.util.CategoryNameSuggestions
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -281,9 +282,11 @@ class CategoriesActivity : AppCompatActivity() {
             photoPath = pendingPhotoPath?.takeIf { it.isNotBlank() },
         )
         lifecycleScope.launch {
-            withContext(Dispatchers.IO) {
-                db.categoryEntryDao().insert(entry)
+            val savedEntry = withContext(Dispatchers.IO) {
+                val id = db.categoryEntryDao().insert(entry)
+                entry.copy(id = id)
             }
+            FirebaseDataStore.syncCategoryEntry(savedEntry)
             CategoryNameSuggestions.rememberUsedLabel(this@CategoriesActivity, category)
             clearForm()
             loadEntries()
@@ -302,6 +305,7 @@ class CategoriesActivity : AppCompatActivity() {
                 db.categoryEntryDao().deleteById(id)
                 row?.photoPath
             }
+            FirebaseDataStore.deleteCategoryEntry(id)
             pathToRemove?.let { File(it).delete() }
             clearForm()
             loadEntries()

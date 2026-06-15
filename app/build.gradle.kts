@@ -4,6 +4,10 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
+}
+
 android {
     namespace = "com.example.pocketmanage"
     compileSdk = 35
@@ -55,6 +59,8 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.mpandroidchart)
     implementation(libs.work.runtime.ktx)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.firestore)
     ksp(libs.androidx.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
