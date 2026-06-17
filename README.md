@@ -1,3 +1,27 @@
+Due to Youtube Removing our video Please download here
+
+
+
+
+
+BankSmart 💰
+Budgeting made fun, one quest at a time.
+
+Table of Contents
+Project Overview
+Who It's For
+Key Features
+Our Custom Features
+Tech Stack
+Design Decisions
+GitHub & GitHub Actions
+Getting Started
+Methodology
+Screenshots
+Video Demo
+Team
+-----------------------------------------------------------------------------------------------------------------------------
+
 BankSmart 
 Budgeting made fun, one quest at a time.
 Project Overview
