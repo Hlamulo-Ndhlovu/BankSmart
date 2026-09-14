@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BankSmart</string>
+    <string name="app_name" translatable="false">BankSmart</string>
     <string name="total_balance">Total Balance</string>
     <string name="income">Income</string>
     <string name="expenses">Expenses</string>
@@ -94,7 +94,7 @@
     <string name="rewards_subtitle">Earn points for tracking expenses, keeping streaks, and staying within budget.</string>
     <string name="rewards_points_fmt">%1$d pts</string>
     <string name="rewards_points_label">Reward balance</string>
-    <string name="rewards_badge_icon">B</string>
+    <string name="rewards_badge_icon" translatable="false">B</string>
     <string name="rewards_next_level_fmt">%1$d pts to Level %2$d</string>
     <string name="rewards_level_fmt">Level %1$d</string>
     <string name="rewards_streak_fmt">%1$d-day streak</string>
@@ -191,4 +191,68 @@
     <string name="reminder_time_updated">Reminder time saved</string>
     <string name="open_system_notification_settings">Open system notification settings</string>
     <string name="notifications_permission_denied">Notification permission is required for reminders</string>
+
+    <!-- Language -->
+    <string name="language">Language</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_zulu" translatable="false">isiZulu</string>
+    <string name="language_sepedi" translatable="false">Sepedi</string>
+    <string name="language_afrikaans" translatable="false">Afrikaans</string>
+    <string name="language_tsonga" translatable="false">Xitsonga</string>
+
+    <!-- Loyalty tiers & rewards -->
+    <string name="loyalty_title">Loyalty &amp; Rewards</string>
+    <string name="loyalty_current_tier">Your current tier</string>
+    <string name="loyalty_next_tier_fmt">%1$d pts to %2$s</string>
+    <string name="loyalty_top_tier">You have reached the highest tier!</string>
+    <string name="loyalty_perk_row_fmt" translatable="false">\u2713  %1$s</string>
+    <string name="loyalty_perks_title">Your perks</string>
+    <string name="loyalty_earn_title">How to earn points</string>
+    <string name="loyalty_earn_transaction">+10 pts for every expense you log this month</string>
+    <string name="loyalty_earn_budget">+20 pts for every budget category kept within its limit</string>
+    <string name="loyalty_earn_streak">+5 pts for every day in your logging streak</string>
+    <string name="loyalty_rewards_header_fmt">Rewards (%1$d/%2$d unlocked)</string>
+    <string name="reward_unlocked">Unlocked</string>
+    <string name="reward_locked_fmt">%1$d pts</string>
+
+    <string name="tier_bronze">Bronze</string>
+    <string name="tier_bronze_desc">Just getting started</string>
+    <string name="tier_silver">Silver</string>
+    <string name="tier_silver_desc">Building good habits</string>
+    <string name="tier_gold">Gold</string>
+    <string name="tier_gold_desc">Consistent budgeter</string>
+    <string name="tier_platinum">Platinum</string>
+    <string name="tier_platinum_desc">Financial pro</string>
+    <string name="tier_diamond">Diamond</string>
+    <string name="tier_diamond_desc">Wealth master</string>
+
+    <string name="perk_bronze_1">Daily budget reminders</string>
+    <string name="perk_bronze_2">Starter badge on your profile</string>
+    <string name="perk_silver_1">Weekly spending insights</string>
+    <string name="perk_silver_2">Silver badge on your profile</string>
+    <string name="perk_gold_1">Custom savings challenges</string>
+    <string name="perk_gold_2">Gold badge on your profile</string>
+    <string name="perk_platinum_1">Streak protection: one missed day per month</string>
+    <string name="perk_platinum_2">Platinum badge on your profile</string>
+    <string name="perk_diamond_1">Double points on every budget kept</string>
+    <string name="perk_diamond_2">Diamond badge on your profile</string>
+
+    <string name="reward_first_steps">First Steps</string>
+    <string name="reward_first_steps_desc">Log your very first expense</string>
+    <string name="reward_streak_starter">Streak Starter</string>
+    <string name="reward_streak_starter_desc">Keep your logging streak alive</string>
+    <string name="reward_budget_keeper">Budget Keeper</string>
+    <string name="reward_budget_keeper_desc">Stay within budget in your categories</string>
+    <string name="reward_silver_theme">Silver Status</string>
+    <string name="reward_silver_theme_desc">Reach the Silver tier</string>
+    <string name="reward_saver_badge">Smart Saver</string>
+    <string name="reward_saver_badge_desc">Grow your savings account</string>
+    <string name="reward_gold_frame">Gold Status</string>
+    <string name="reward_gold_frame_desc">Reach the Gold tier</string>
+    <string name="reward_insights_pro">Insights Pro</string>
+    <string name="reward_insights_pro_desc">Track spending for a full month</string>
+    <string name="reward_platinum_card">Platinum Status</string>
+    <string name="reward_platinum_card_desc">Reach the Platinum tier</string>
+    <string name="reward_diamond_crown">Diamond Crown</string>
+    <string name="reward_diamond_crown_desc">Reach the Diamond tier</string>
 </resources>

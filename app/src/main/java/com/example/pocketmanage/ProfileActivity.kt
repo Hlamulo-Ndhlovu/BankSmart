@@ -22,6 +22,8 @@ import com.example.pocketmanage.auth.LocalAuthRepository
 import com.example.pocketmanage.data.AppDatabase
 import com.example.pocketmanage.data.FirebaseDataStore
 import com.example.pocketmanage.data.FinanceRepository
+import com.example.pocketmanage.gamification.LoyaltyStatus
+import com.example.pocketmanage.util.AppLanguage
 import com.example.pocketmanage.util.MoneyFormat
 import com.example.pocketmanage.util.ProfileAvatarStorage
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -91,6 +93,10 @@ class ProfileActivity : AppCompatActivity() {
         findViewById<ShapeableImageView>(R.id.profileAvatar).setOnClickListener { showPhotoOptionsDialog() }
 
         findViewById<MaterialButton>(R.id.buttonEditProfile).setOnClickListener { showEditProfileDialog() }
+        findViewById<View>(R.id.rewardsRow).setOnClickListener {
+            startActivity(Intent(this, RewardsActivity::class.java))
+        }
+        findViewById<View>(R.id.languageRow).setOnClickListener { showLanguageDialog() }
         findViewById<View>(R.id.notificationsRow).setOnClickListener {
             startActivity(Intent(this, NotificationsActivity::class.java))
         }
@@ -211,6 +217,23 @@ class ProfileActivity : AppCompatActivity() {
         iv.setBackgroundResource(R.drawable.profile_avatar_placeholder_circle)
     }
 
+    private fun showLanguageDialog() {
+        val languages = AppLanguage.entries
+        val current = AppLanguage.current()
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.language)
+            .setSingleChoiceItems(
+                languages.map { getString(it.labelRes) }.toTypedArray(),
+                languages.indexOf(current),
+            ) { dialog, which ->
+                dialog.dismiss()
+                val chosen = languages[which]
+                if (chosen != current) AppLanguage.apply(chosen)
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
     private fun showEditProfileDialog() {
         val userId = LocalAuth.currentUserId() ?: return
         lifecycleScope.launch {
@@ -315,7 +338,12 @@ class ProfileActivity : AppCompatActivity() {
                 MoneyFormat.formatCents(exp)
             findViewById<android.widget.TextView>(R.id.profileBudgetsCount).text =
                 FinanceRepository.budgetCategoriesCount().toString()
-            bindRewards(FinanceRepository.rewardsStatus())
+            val rewards = FinanceRepository.rewardsStatus()
+            bindRewards(rewards)
+            findViewById<android.widget.TextView>(R.id.profileTierText).text =
+                getString(LoyaltyStatus.fromPoints(rewards.points).tier.nameRes)
+            findViewById<android.widget.TextView>(R.id.profileLanguageText).text =
+                getString(AppLanguage.current().labelRes)
 
             userId?.let { bindAvatar(it) }
         }
